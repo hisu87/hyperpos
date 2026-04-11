@@ -1,7 +1,12 @@
 import Link from "next/link";
 import { ArrowRight, Shield, Sparkles, Zap } from "lucide-react";
 
-const navLinks = ["Platform", "Hardware", "Pricing", "Resources"];
+const navLinks = [
+  { label: "Platform", href: "/platform" },
+  { label: "Hardware", href: "/hardware" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Resources", href: "/resources" },
+];
 
 const featureCards = [
   {
@@ -33,11 +38,12 @@ export default function ContactSalesPage() {
           </Link>
           <nav className="hidden items-center gap-9 text-sm text-white/45 md:flex">
             {navLinks.map((item) => (
-              <span
-                key={item}
+              <Link
+                key={item.label}
+                href={item.href}
                 className="transition-colors hover:text-white/75">
-                {item}
-              </span>
+                {item.label}
+              </Link>
             ))}
           </nav>
           <div className="flex items-center gap-4">
@@ -181,9 +187,21 @@ export default function ContactSalesPage() {
                 Product
               </p>
               <div className="mt-4 space-y-2">
-                <span className="block">Platform</span>
-                <span className="block">Hardware</span>
-                <span className="block">Pricing</span>
+                <Link
+                  className="block transition-colors hover:text-white/80"
+                  href="/platform">
+                  Platform
+                </Link>
+                <Link
+                  className="block transition-colors hover:text-white/80"
+                  href="/hardware">
+                  Hardware
+                </Link>
+                <Link
+                  className="block transition-colors hover:text-white/80"
+                  href="/pricing">
+                  Pricing
+                </Link>
               </div>
             </div>
             <div>
@@ -213,9 +231,17 @@ export default function ContactSalesPage() {
                 Social
               </p>
               <div className="mt-4 space-y-2">
+                <Link
+                  className="block transition-colors hover:text-white/80"
+                  href="/resources">
+                  Documentation
+                </Link>
+                <Link
+                  className="block transition-colors hover:text-white/80"
+                  href="/contact-sales">
+                  Contact Sales
+                </Link>
                 <span className="block">LinkedIn</span>
-                <span className="block">Documentation</span>
-                <span className="block">Contact Sales</span>
               </div>
             </div>
           </div>

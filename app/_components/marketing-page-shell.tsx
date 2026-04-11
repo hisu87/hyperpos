@@ -6,6 +6,7 @@ const footerLinks = [
   { label: "Privacy Policy", href: "/privacy-policy" },
   { label: "Terms of Service", href: "/terms-of-service" },
   { label: "System Status", href: "/system-status" },
+  { label: "Site Map", href: "/site-map" },
   { label: "Contact Sales", href: "/contact-sales" },
 ];
 

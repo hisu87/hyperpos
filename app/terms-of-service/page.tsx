@@ -1,7 +1,12 @@
 import Link from "next/link";
 import { KeyRound, Landmark, ShieldAlert, Sparkles, Zap } from "lucide-react";
 
-const navLinks = ["Platform", "Hardware", "Pricing", "Resources"];
+const navLinks = [
+  { label: "Platform", href: "/platform" },
+  { label: "Hardware", href: "/hardware" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Resources", href: "/resources" },
+];
 
 const obligationCards = [
   {
@@ -37,11 +42,12 @@ export default function TermsOfServicePage() {
 
           <nav className="hidden items-center gap-9 text-sm text-white/45 md:flex">
             {navLinks.map((item) => (
-              <span
-                key={item}
+              <Link
+                key={item.label}
+                href={item.href}
                 className="transition-colors hover:text-white/75">
-                {item}
-              </span>
+                {item.label}
+              </Link>
             ))}
           </nav>
 

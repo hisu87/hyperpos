@@ -46,5 +46,6 @@ docs/*
 AGENTS.md
 CLAUDE.md
 .github/copilot-instructions.md
+.github/skills/*
 .vscode/github/copilot-instructions.md
 figma/*
